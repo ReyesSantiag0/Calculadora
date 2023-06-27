@@ -111,6 +111,33 @@ function reiniciarKilos() {
   gramos.value = "";
 }
 
+//===================== Longitud =========================
+
+function entradaMetros(num) {
+  let numero = metros.value;
+  metros.value = numero + num;
+}
+
+function calcularCentimetros() {
+  if (metros.value != "") {
+    let inputMetros = parseFloat(document.getElementById("metros").value);
+    let outCentimetros = inputMetros * 100;
+    document.getElementById("centimetros").value = outCentimetros + " cm";
+  } else {
+    alert("Error! Adicionar valores válidos.");
+  }
+}
+
+function borrarMetros() {
+  let borrarMetros = metros.value;
+  metros.value = borrarMetros.substring(0, borrarMetros.length - 1);
+}
+
+function reiniciarMetros() {
+  metros.value = "";
+  centimetros.value = "";
+}
+
 //=====================TEMA =========================
 
 const theme = {
