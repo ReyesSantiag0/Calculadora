@@ -9,14 +9,14 @@
   <meta name="description"
     content="This Responsive Calculator is a portifolio project and challenge made by Frotntend Mentor">
 
-  <title>Calculadora</title>
+  <title>Temperatura</title>
 
-  <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../images/favicon-32x32.png" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
 
 </head>
 
@@ -36,7 +36,7 @@
 
           <div class="calc-top row">
 
-            <h3 class="col-6">Calculadora</h3>
+            <h3 class="col-6">Temperatura</h3>
             <h4 class="col-3">Tema</h4>
 
             <div class="col-3 toggle">
@@ -48,7 +48,10 @@
           </div>
 
           <div class="calc-top-result row">
-            <input type="text" class="col-12" id="result" placeholder="0" disabled></input>
+            <input type="text" class="col-12" id="centigrados" placeholder="°C" disabled></input>
+          </div>
+          <div class="calc-top-result row">
+            <input type="text" class="col-12" id="farenheit" placeholder="°F" disabled></input>
           </div>
         </div>
 
@@ -56,32 +59,26 @@
 
           <div class="container">
             <div class="row">
-              <input class="col" type="button" value="7" onclick="entrada('7')">
-              <input class="col" type="button" value="8" onclick="entrada('8')">
-              <input class="col" type="button" value="9" onclick="entrada('9')">
-              <input class="col" type="button" value="BORRAR" id="del" onclick="borrar()">
+              <input class="col" type="button" value="9" onclick="entradaCentigrados('9')">
+              <input class="col" type="button" value="0" onclick="entradaCentigrados('0')">
+              <input class="col" type="button" value="." onclick="entradaCentigrados('.')">
+              <input class="col" type="button" value="BORRAR" id="del" onclick="borrarCentigrados()">
             </div>
             <div class="row">
-              <input class="col" type="button" value="4" onclick="entrada('4')">
-              <input class="col" type="button" value="5" onclick="entrada('5')">
-              <input class="col" type="button" value="6" onclick="entrada('6')">
-              <input class="col" type="button" value="+" onclick="entrada('+')">
+              <input class="col" type="button" value="5" onclick="entradaCentigrados('5')">
+              <input class="col" type="button" value="6" onclick="entradaCentigrados('6')">
+              <input class="col" type="button" value="7" onclick="entradaCentigrados('7')">
+              <input class="col" type="button" value="8" onclick="entradaCentigrados('8')">
             </div>
             <div class="row">
-              <input class="col" type="button" value="1" onclick="entrada('1')">
-              <input class="col" type="button" value="2" onclick="entrada('2')">
-              <input class="col" type="button" value="3" onclick="entrada('3')">
-              <input class="col" type="button" value="-" onclick="entrada('-')">
+              <input class="col" type="button" value="1" onclick="entradaCentigrados('1')">
+              <input class="col" type="button" value="2" onclick="entradaCentigrados('2')">
+              <input class="col" type="button" value="3" onclick="entradaCentigrados('3')">
+              <input class="col" type="button" value="4" onclick="entradaCentigrados('4')">
             </div>
             <div class="row">
-              <input class="col" type="button" value="." onclick="entrada('.')">
-              <input class="col" type="button" value="0" onclick="entrada('0')">
-              <input class="col" type="button" value="/" onclick="entrada('/')">
-              <input class="col" type="button" value="x" onclick="entrada('*')">
-            </div>
-            <div class="row">
-              <input class="col" type="button" value="Reiniciar" id="reset" onclick="reiniciar()">
-              <input class="col" type="button" value="=" id="equals" onclick="calcular()">
+              <input class="col" type="button" value="Reiniciar" id="reset" onclick="reiniciarTemperatura()">
+              <input class="col" type="button" value="Convertir" id="equals" onclick="calcularFarenheit()">
             </div>
             <div class="calc-top row">
               <hr>
@@ -89,11 +86,11 @@
               <hr>
             </div>
             <div class="row">
-              <a class="col" type="button" href="./pages/temperatura.html">°C</a>
+              <a class="col" type="button" href="./temperatura.html">°C</a>
               <a class=" col" type="button">Presión</a>
               <a class="col" type="button">Masa</a>
               <a class="col" type="button">Longitud</a>
-              <a class="col" type="button" href="./index.html">Calculadora</a>
+              <a class="col" type="button" href="../index.html">Calculadora</a>
             </div>
           </div>
 
@@ -107,7 +104,7 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
 
-  <script src="script.js"></script>
+  <script src="../script.js"></script>
 </body>
 
 </html>

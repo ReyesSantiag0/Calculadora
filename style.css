@@ -79,15 +79,18 @@
   padding: 10px;
   transition: var(--transition);
 }
-.teclas-de-calculo input {
+.teclas-de-calculo input,
+a {
   background-color: var(--key-background);
   color: var(--key-color-bottom);
-  border: 2px solid var(--key-background);
+  border: 7px solid var(--key-background);
   border-radius: 5px;
   box-shadow: 1px 1.5px 1px var(--key-shadow);
   margin: 10px;
   height: 35px;
   transition: var(--transition);
+  text-decoration: none;
+  text-align: center;
 }
 #reset,
 #del {
@@ -110,7 +113,8 @@
 }
 
 /* Keys hover animations */
-.teclas-de-calculo input:hover {
+.teclas-de-calculo input:hover,
+a:hover {
   border: 2px solid var(--key-background);
   color: var(--key-color-top);
   background-color: hsla(0, 0%, 100%, 0);

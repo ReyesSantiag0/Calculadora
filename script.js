@@ -23,6 +23,38 @@ function borrar() {
   result.value = result2.substring(0, result2.length - 1);
 }
 
+// TEMPERATURA
+
+function entradaCentigrados(num) {
+  let numero = centigrados.value;
+  centigrados.value = numero + num;
+}
+
+function calcularFarenheit() {
+  if (centigrados.value != "") {
+    let inputCentigrados = parseFloat(
+      document.getElementById("centigrados").value
+    );
+    let outFarenheit = Math.round(inputCentigrados * 1.8 + 32);
+    document.getElementById("farenheit").value = outFarenheit + " °F";
+  } else {
+    alert("Error! Adicionar valores válidos.");
+  }
+}
+
+function borrarCentigrados() {
+  let borrarCentigrados = centigrados.value;
+  centigrados.value = borrarCentigrados.substring(
+    0,
+    borrarCentigrados.length - 1
+  );
+}
+
+function reiniciarTemperatura() {
+  centigrados.value = "";
+  farenheit.value = "";
+}
+
 const theme = {
   defaul() {
     root.style.setProperty("--background", "#3a4764");
