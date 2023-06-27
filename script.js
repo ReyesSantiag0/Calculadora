@@ -1,3 +1,5 @@
+//=====================CALCULADORA  =========================
+
 let result = document.getElementById("result");
 
 function entrada(num) {
@@ -23,7 +25,7 @@ function borrar() {
   result.value = result2.substring(0, result2.length - 1);
 }
 
-// TEMPERATURA
+//=====================TEMPERATURA =========================
 
 function entradaCentigrados(num) {
   let numero = centigrados.value;
@@ -54,6 +56,36 @@ function reiniciarTemperatura() {
   centigrados.value = "";
   farenheit.value = "";
 }
+
+//=====================PRESIÓN =========================
+
+function entradaPascales(num) {
+  let numero = pascales.value;
+  pascales.value = numero + num;
+}
+
+function calcularBar() {
+  if (pascales.value != "") {
+    //  Bar = pascals * 1.0e-5;
+    let inputPascales = parseFloat(document.getElementById("pascales").value);
+    let outBar = inputPascales / 100000;
+    document.getElementById("bar").value = outBar + " Bar";
+  } else {
+    alert("Error! Adicionar valores válidos.");
+  }
+}
+
+function borrarPascales() {
+  let borrarPascales = pascales.value;
+  pascales.value = borrarPascales.substring(0, borrarPascales.length - 1);
+}
+
+function reiniciarPascales() {
+  pascales.value = "";
+  bar.value = "";
+}
+
+//=====================TEMA =========================
 
 const theme = {
   defaul() {
