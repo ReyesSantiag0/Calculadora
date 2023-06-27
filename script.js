@@ -66,7 +66,6 @@ function entradaPascales(num) {
 
 function calcularBar() {
   if (pascales.value != "") {
-    //  Bar = pascals * 1.0e-5;
     let inputPascales = parseFloat(document.getElementById("pascales").value);
     let outBar = inputPascales / 100000;
     document.getElementById("bar").value = outBar + " Bar";
@@ -83,6 +82,33 @@ function borrarPascales() {
 function reiniciarPascales() {
   pascales.value = "";
   bar.value = "";
+}
+
+//===================== MASA =========================
+
+function entradaKilos(num) {
+  let numero = kilos.value;
+  kilos.value = numero + num;
+}
+
+function calcularGramos() {
+  if (kilos.value != "") {
+    let inputkilos = parseFloat(document.getElementById("kilos").value);
+    let outgramos = inputkilos * 1000;
+    document.getElementById("gramos").value = outgramos + " gr";
+  } else {
+    alert("Error! Adicionar valores válidos.");
+  }
+}
+
+function borrarKilos() {
+  let borrarKilos = kilos.value;
+  kilos.value = borrarKilos.substring(0, borrarKilos.length - 1);
+}
+
+function reiniciarKilos() {
+  kilos.value = "";
+  gramos.value = "";
 }
 
 //=====================TEMA =========================
